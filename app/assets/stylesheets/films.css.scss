@@ -103,8 +103,8 @@
         width: 50px;
         margin-left: 25px;
         margin-top: 25px;
-        background-color: red;
-        border: 2px solid #F7F7F7;
+        background-color: #f0f0f0;
+        border: 2px solid red;
         border-radius: 5px;
 
         &:hover {
@@ -141,5 +141,17 @@
 
 #object {
   position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: 2px dotted #39b8f7;
+    border-radius: 50%;
+  }
+
 }
 
