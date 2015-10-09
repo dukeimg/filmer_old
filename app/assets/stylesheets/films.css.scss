@@ -139,7 +139,7 @@
   }
 }
 
-#object {
+/*#object {
   position: absolute;
   box-sizing: border-box;
   text-align: center;
@@ -147,11 +147,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border 1s;
+  border: none;
 
-  &:hover {
+
+
+  &.active {
     border: 2px dotted #39b8f7;
     border-radius: 50%;
   }
-
 }
 
+span {
+  text-wrap: none;
+  white-space: nowrap;
+}
+*/
