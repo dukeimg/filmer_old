@@ -1,6 +1,3 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-
 //VARIABLES
 
 var a = false;
@@ -8,8 +5,7 @@ var sound_click = document.createElement('audio');
 var sound_drop = document.createElement('audio');
 var sound_drop_back = document.createElement('audio');
 var i = 1;
-var objID = 1;
-
+var params;
    // $(window).load(function() {
      //   a = true;
     //});
@@ -39,6 +35,7 @@ function loading() {
             $(".color-3").css("z-index", "3");
             break;
     }
+
     setTimeout(function () {
         if (a == false) {
             $(".color-" + i.toString()).animate({left: '-125%'}, 1250, "easeInOutCirc",function(){
@@ -79,40 +76,65 @@ function mediaLoad() {
 }
 
 function objectCreate(type) {
-    // get ID
-    if ($('object-' + objID).length) {
-        objID++;
-    }
-    drag = true; // start of dragging
+    // get ID, check if DOM exists
+    var objCounter = 0;
+
+    do {
+        objCounter += 1;
+        objectID = 'object-' + objCounter;
+    } while ($('#' + objectID).length != 0);
+
     sound_click.play();
 
-    // get object type
+    // get object type and create
 
-   /* switch(type) {
-        case 'label'
-    }*/
+    var types = {
+        'label' : function () {
+            var myObject = $("<div id=" + objectID + "><span>Hello world</span></div>");
+            myObject.addClass('obj obj-label').appendTo('#page').draggable({
+                revert : function(valid) {
+                    if(!valid) {
+                        this.remove();
+                    }
+                }
+            });
 
-    /*$("<div id='object'><span id='obj-label' style='display:block'></span></div>").appendTo('.page').offset({left:e.pageX,top:e.pageY}).draggable(); // create an object
-    measurements = [$('#object').width(), $('#object').height(), $('#object').offset().top, $('#object').offset().left ];
-    var w = $('#object').width() * 1.25;
-    $('#object').width(w).height(w).css({ top: ($(this).offset().top - ((w - measurements[1]) / 2))}).css({ left: $(this).offset().left - ((w - measurements[0]) / 2) });
-    $(document).on('mousemove', function(e){
-        $('#object').css({
-            left:  e.pageX,
-            top:   e.pageY
-        });
-        $(document).mouseup(function() {
-            $(document).off("mousemove");
-            if (drag == true) {
-                sound_drop.play();
-            }
-            drag = false; // finish of dragging
-        });
-    });*/
+            params = {
+                w : myObject.width($('#' + objectID + " > span").width() * 1.25),
+                h : myObject.height($('#' + objectID + " > span").width() * 1.25)
+            };
+            console.log(myObject.width());
+        },
+        'image' : function () {
+            $("<div id=" + objectID + "></div>").addClass('obj obj-image').appendTo('#page').draggable();
+        }
+    };
+
+    return types[type]();
 }
 
-//OBJECTS
-//nothing is here for now
+function pageAdjust() {
+
+    if ($('.preview').height() <= $('#page').height()) {
+        $('#page').height($('.preview').height() - 10);
+        $('#page').width($('#page').height() * 1.7778);
+    }
+
+    if ($('.preview').width() <= $('#page').width()){
+        $('#page').width('100%');
+        $('#page').height($('#page').width() * 0.5625);
+    }
+
+    if ($(window).width() < 720) {
+        $('#page').hide();
+    } else {
+        $('#page').show();
+    }
+}
+
+$(window).on('resize', function(){
+    pageAdjust();
+});
 
 /*$(document).ready(function(){
     a = true;
@@ -183,7 +205,11 @@ function objectCreate(type) {
 //READY
 
 $(document).ready(function(){
+    pageAdjust();
 
+    $('#label').mousedown(function(){
+        objectCreate('label');
+    });
 });
 
 

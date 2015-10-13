@@ -48,7 +48,7 @@
 }
 
 .editor {
-  position: fixed;
+  //position: fixed;
   height: 100%;
   width: 100%;
   display: flex;
@@ -121,7 +121,7 @@
   }
 
   .preview {
-    height: 100%;
+    height: auto;
     top: 50px;
     width: auto;
     left: 250px;
@@ -131,10 +131,9 @@
     justify-content: center;
     align-items: center;
 
-    .page {
-      width: 100vmin;
-      padding-bottom: 56.25vmin; //16:9 56.25
-      background-color: white;
+    #page {
+      width: 100%;
+      background-color: red;
     }
   }
 }
@@ -163,3 +162,15 @@ span {
   white-space: nowrap;
 }
 */
+
+.obj {
+  background-color: #777777;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    display: block;
+  }
+}
