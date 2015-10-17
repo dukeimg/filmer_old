@@ -48,19 +48,69 @@
 }
 
 .editor {
-  //position: fixed;
-  height: 100%;
-  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-flow: column;
+  min-height: 100%;
   user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
 
+  .main {
+    flex: 1 1 auto;
+    display: flex;
+    min-height: 100%;
+
+    .tool-bar {
+      min-height: 100%;
+      min-width: 175px;
+      width: 175px;
+      background-color: #F76475;
+
+      .tools {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .tool {
+          height: 50px;
+          width: 50px;
+          margin-left: 25px;
+          margin-top: 25px;
+          background-color: #f0f0f0;
+          border: 2px solid red;
+          border-radius: 5px;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          &:active {
+            transform: scale(1.1);
+            border-color: #39b8f7;
+          }
+        }
+      }
+
+    }
+
+    .preview {
+      background-color: #d0d0d0;
+      display: flex;
+      flex: 1 1 auto;
+      justify-content: center;
+      align-items: center;
+
+      #page {
+        width: 80%;
+        background-color: white;
+      }
+    }
+  }
+
   .actions-bar {
+    flex: 0 1 auto;
     height: 50px;
-    min-width: 500px;
     width: 100%;
     background-color: #E3142C;
     display: flex;
@@ -86,55 +136,9 @@
     }
   }
 
-  .tool-bar {
-    height: 95%;
-    top: 5%;
-    min-width: 175px;
-    width: 175px;
-    background-color: #F76475;
-
-    .tools {
-
-      display: flex;
-      flex-wrap: wrap;
-
-      .tool {
-        height: 50px;
-        width: 50px;
-        margin-left: 25px;
-        margin-top: 25px;
-        background-color: #f0f0f0;
-        border: 2px solid red;
-        border-radius: 5px;
-
-        &:hover {
-          transform: scale(1.1);
-        }
-
-        &:active {
-          transform: scale(1.1);
-          border-color: #39b8f7;
-        }
-      }
-    }
-
-  }
-
-  .preview {
-    height: auto;
-    top: 50px;
-    width: auto;
-    left: 250px;
-    background-color: #d0d0d0;
-    display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
-    align-items: center;
-
-    #page {
-      width: 100%;
-      background-color: red;
-    }
+  .status-bar {
+    background-color: #2E2F30;
+    flex: 0 1 40px;
   }
 }
 

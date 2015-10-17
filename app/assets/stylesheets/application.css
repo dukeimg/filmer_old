@@ -14,3 +14,54 @@
  *= require_self
  *= require jquery-ui
  */
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+footer {
+    width: 100%;
+    background-color: #3e9fc3;
+    padding-top: 18px;
+}
+
+.copyrights {
+    margin-left: 18px;
+    color: #fff;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fullscreen {
+    height: 100vh;
+    width: 100%;
+}
+
+.btn-default {
+    background-color: #42b8dc;
+    color: #fff;
+}
+
+.btn-default:hover {
+    background-color: #24687c;
+    color: white;
+}
+
+.logo {
+    color: #42b8dc !important;
+    font-family: 'Classica Two';
+}
+
+.btn-squared {
+    border-radius: 0;
+    width: 100%;
+    height: 50px;
+}

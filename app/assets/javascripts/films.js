@@ -115,15 +115,23 @@ function objectCreate(type) {
 
 function pageAdjust() {
 
-    if ($('.preview').height() <= $('#page').height()) {
-        $('#page').height($('.preview').height() - 10);
+    /*if ($('.preview').height() <= $('#page').height()) {
+        $('#page').height($('.preview').height());
         $('#page').width($('#page').height() * 1.7778);
+    } else {
+        $('#page').width('80%');
+        $('#page').height($('#page').width() * 0.5625);
+    }*/
+
+    $('#page').width('80%');
+    $('#page').height($('#page').width() * 0.5625);
+
+    if ($('.preview').height() <= $('#page').height()) {
+        $('#page').height($('.preview').height());
+        $('#page').width($('.preview').height() * 1.7778);
     }
 
-    if ($('.preview').width() <= $('#page').width()){
-        $('#page').width('100%');
-        $('#page').height($('#page').width() * 0.5625);
-    }
+
 
     if ($(window).width() < 720) {
         $('#page').hide();
@@ -135,6 +143,7 @@ function pageAdjust() {
 $(window).on('resize', function(){
     pageAdjust();
 });
+
 
 /*$(document).ready(function(){
     a = true;
@@ -210,6 +219,8 @@ $(document).ready(function(){
     $('#label').mousedown(function(){
         objectCreate('label');
     });
+
+    $('#page').droppable();
 });
 
 

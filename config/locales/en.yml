@@ -21,3 +21,13 @@
 
 en:
   hello: "Hello world"
+  tagline: "Collect your stories here"
+  copyright: "Filmer © 2015 Viktor Danilov"
+  Filmer: "Filmer"
+  get-started: "Get Started"
+  sign-in: "Sign in"
+  username: "Username"
+  password: "Password"
+  sign-up: "Sign up"
+  be-number: "Become the user #"
+  back: "Back"

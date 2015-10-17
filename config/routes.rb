@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  root 'films#new'
+  root 'pages#index'
+  resources :users
+  resources :projects
+  resources :films
+  get 'login' => 'sessions#new'
+  get 'projects' => 'projects#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

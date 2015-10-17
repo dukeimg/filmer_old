@@ -1,0 +1,39 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron {
+  background-color: transparent;
+  height: 800px;
+  margin: 0;
+}
+
+.welcome-background {
+  background-image: url("https://dl.dropboxusercontent.com/u/100656262/%D0%A4%D0%BE%D1%82%D0%BE%2016.10.15%2C%2013%2040%2042.jpg");
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  -webkit-filter: blur(5px) brightness(0.5);
+  -moz-filter: blur(5px) brightness(0.5);
+  filter: blur(5px) brightness(0.5);
+  transform: scale(1.01);
+  overflow: hidden;
+}
+
+.pages-navbar {
+  margin: 0;
+  background-color: #42b8dc;
+  border: none;
+
+  .nav>li>a {
+    color: #fff;
+  }
+}
+
+.welcome {
+  top: 180px;
+  position: relative;
+  color: #fff;
+}
