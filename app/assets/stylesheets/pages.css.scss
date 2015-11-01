@@ -4,28 +4,40 @@
 
 .jumbotron {
   background-color: transparent;
-  height: 800px;
+  height: 600px;
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-background {
-  background-image: url("https://dl.dropboxusercontent.com/u/100656262/%D0%A4%D0%BE%D1%82%D0%BE%2016.10.15%2C%2013%2040%2042.jpg");
-  background-size: cover;
-  height: 800px;
-  width: 100%;
   position: absolute;
-  z-index: -1;
-  -webkit-filter: blur(5px) brightness(0.5);
-  -moz-filter: blur(5px) brightness(0.5);
-  filter: blur(5px) brightness(0.5);
-  transform: scale(1.01);
+  top: 0;
+  z-index: -99;
+  width: 100%;
+  height: 600px;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
   overflow: hidden;
 }
 
 .pages-navbar {
   margin: 0;
-  background-color: #42b8dc;
+  background-color: #ff5a5f;
   border: none;
+  height: 60px;
+
+  .nav>li>a {
+    color: #fff;
+  }
+}
+
+.landing {
+  background-color: transparent;
+  border: none;
+  height: 60px;
 
   .nav>li>a {
     color: #fff;
@@ -33,7 +45,22 @@
 }
 
 .welcome {
-  top: 180px;
-  position: relative;
+  display: block;
   color: #fff;
+  text-rendering: optimizelegibility;
+  line-height: 1.1;
+}
+
+.btn-landing {
+  border-radius: 0;
+  color: white;
+  padding: 9px 27px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: rgba(0,0,0, 0.5);
+    color: white !important;
+  }
 }

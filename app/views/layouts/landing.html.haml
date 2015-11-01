@@ -1,0 +1,38 @@
+!!! 5
+%html
+  %head
+    %title= yield(:title)
+    %link{ :rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"}
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    = favicon_link_tag
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1"}
+    %meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
+    %meta{ :charset => "utf-8"}
+    %script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
+
+  %body{:style => 'background-color: #ff5a5f'}
+    %header.navbar.navbar-default.navbar-fixed-top.landing
+      .container-fluid
+        .navbar-header
+          %a.navbar-brand{ :href => "#"}
+            .logo-brand= t('Filmer')
+        %nav.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+          %ul.nav.navbar-nav.navbar-right
+            %li
+              %a{ :href => login_path}= t('sign-in')
+    = yield
+    %footer
+      .container-fluid
+        .row
+          %p.text-left.copyrights= t('copyright')
+          .text-right
+            %span Icons made by
+            %a{:href => "http://www.freepik.com", :title => "Freepik"} Freepik
+            %span from
+            %a{:href => "http://www.flaticon.com",:title => "Flaticon"} www.flaticon.com
+            %span is licensed by
+            %a{:href => "http://creativecommons.org/licenses/by/3.0/", :title => "Creative Commons BY 3.0"}CC BY 3.0
+  %script{ :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}

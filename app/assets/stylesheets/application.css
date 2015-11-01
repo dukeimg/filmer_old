@@ -22,7 +22,7 @@ body {
 
 footer {
     width: 100%;
-    background-color: #3e9fc3;
+    background-color: #ff5a5f;
     padding-top: 18px;
 }
 
@@ -46,7 +46,7 @@ footer {
 }
 
 .btn-default {
-    background-color: #42b8dc;
+    background-color: #ff5a5f;
     color: #fff;
 }
 
@@ -55,9 +55,18 @@ footer {
     color: white;
 }
 
-.logo {
-    color: #42b8dc !important;
+.tagline {
+    color: white !important;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.logo-brand {
+    color: #ff5a5f !important;
     font-family: 'Classica Two';
+    height: 50px;
+    font-size: 25px;
+    margin-top: 5px;
 }
 
 .btn-squared {

@@ -1,8 +1,11 @@
-.welcome-background
+- title "Filmer"
 .jumbotron
+  .welcome-background
+    %video.embed-responsive-item{:autoplay => 'autoplay', :loop => '1'}
+      %source{:src => '/videoplayback'}
   .container
     .welcome.text-center
-      %h1.logo= t('Filmer')
-      %small= t('tagline')
+      %h1.tagline= t('tagline')
+      %h3= t('slogan')
       .container{ :style => "margin-top: 25px;"}
-        %a.btn.btn-default{ :href => "/projects"}= t('get-started')
+        %a.btn.btn-landing{ :href => "/projects"}= t('get-started')
