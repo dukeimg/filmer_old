@@ -20,10 +20,32 @@ body {
     overflow-x: hidden;
 }
 
+a:hover {
+    text-decoration: none !important;
+    color: #cccccc !important;
+}
+
 footer {
     width: 100%;
     background-color: #ff5a5f;
     padding-top: 18px;
+}
+
+.footer-main {
+    font-size: 1.5em;
+}
+
+.footer-main a {
+    color: white;
+}
+
+.footer-main ul {
+    list-style: none;
+}
+
+.footer-main h3 {
+    border-bottom: 2px solid white;
+    color: white;
 }
 
 .copyrights {

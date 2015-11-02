@@ -25,14 +25,15 @@
               %a{ :href => login_path}= t('sign-in')
     = yield
     %footer
-      .container-fluid
+      .container.footer-main
         .row
-          %p.text-left.copyrights= t('copyright')
-          .text-right
-            %span Icons made by
-            %a{:href => "http://www.freepik.com", :title => "Freepik"} Freepik
-            %span from
-            %a{:href => "http://www.flaticon.com",:title => "Flaticon"} www.flaticon.com
-            %span is licensed by
-            %a{:href => "http://creativecommons.org/licenses/by/3.0/", :title => "Creative Commons BY 3.0"}CC BY 3.0
+          .col-sm-4
+            %h3= t('filmer')
+            %ul
+              %li
+                %a{ :href => login_path}= t('sign-in')
+              %li
+                %a{ :href => 'credits'}= t('copyrights')
+      .container-fluid
+        %p.text-left.copyrights= t('copyright')
   %script{ :src => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"}
