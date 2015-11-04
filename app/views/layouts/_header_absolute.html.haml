@@ -1,0 +1,10 @@
+%header.navbar.navbar-default{:style => 'position: absolute; top: 0; width: 100%'}
+  .container-fluid{:style => 'padding-right:0'}
+    .navbar-header
+      %a.navbar-brand{ :href => "#"}
+        .logo-brand= t('Filmer')
+    %nav.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{ :href => login_path}= t('sign-in')

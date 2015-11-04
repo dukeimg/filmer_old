@@ -1,7 +1,8 @@
-%a.btn-back.flexbox.flex-center{:href => _back_url}
-  .glyphicon.glyphicon-menu-left
-  %div= t('back')
 .container-fullscreen.flexbox.flex-center
+  =render('layouts/header_absolute')
+  %a.btn-back.flexbox.flex-center{:href => root_path}
+    .glyphicon.glyphicon-menu-left
+    %div= t('back')
   .container
     .row
       .col-sm-4.col-sm-offset-4
@@ -20,9 +21,10 @@
               .form-group
                 = f.text_field :username, :placeholder => t("username"), :class => "form-control"
               .form-group
-                = f.password_field :password, :placeholder => t("password"), :class => "form-control"
+                = f.password_field :password_digest, :placeholder => t("password"), :class => "form-control"
               = f.submit t("sign-in"), :class => "btn btn-default"
           .tab-pane#register{ :role => 'tabpanel'}
             %h1= t('sign-up')
-            .flexbox.flex-center{:style => 'height: 132px'}
+            .flexbox.flex-center{:style => 'height: 139px'}
               %a.btn.btn-squared.btn-default.flexbox.flex-center{ :href => new_user_path}= t('be-number')+(User.count+1).to_s
+=render('layouts/footer')

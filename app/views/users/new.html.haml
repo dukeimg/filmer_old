@@ -1,0 +1,31 @@
+.container-fullscreen.flexbox.flex-center
+  =render('layouts/header_absolute')
+  %a.btn-back.flexbox.flex-center{:href => _back_url}
+    .glyphicon.glyphicon-menu-left
+    %div= t('back')
+  .container
+    .row.text-center
+      %h1= t('sign-up')
+      = form_for @user, :html => {:class => "form-horizontal"} do |f|
+        .form-group
+          %label.col-sm-6.text-right.control-label{:for => 'name'}= t('what-is-your-name')
+          .col-sm-6
+            = f.text_field :name, :placeholder => t("name"), :class => "form-control"
+        .form-group
+          %label.col-sm-6.text-right.control-label{:for => 'username'}= t('choose-an-username')
+          .col-sm-6
+            = f.text_field :username, :placeholder => t("username"), :class => "form-control"
+        .form-group
+          %label.col-sm-6.text-right.control-label{:for => 'email'}= t('email')
+          .col-sm-6
+            = f.email_field :email, :placeholder => t("email"), :class => "form-control"
+        .form-group
+          %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password')
+          .col-sm-6
+            = f.password_field :password, :placeholder => t("password"), :class => "form-control"
+        .form-group
+          %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password-again')
+          .col-sm-6
+            = f.password_field :password_confirmation, :placeholder => t("password"), :class => "form-control"
+        = f.submit t("sign-up"), :class => "btn btn-default"
+=render('layouts/footer')

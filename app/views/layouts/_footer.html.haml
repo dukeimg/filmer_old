@@ -1,0 +1,12 @@
+%footer
+  .container.footer-main
+    .row
+      .col-sm-4
+        %h3= t('filmer')
+        %ul
+          %li
+            %a{ :href => login_path}= t('sign-in')
+          %li
+            %a{ :href => 'credits'}= t('copyrights')
+  .container-fluid.footer-legal
+    %p.text-left.copyrights= t('copyright')

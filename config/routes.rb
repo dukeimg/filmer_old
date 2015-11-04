@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :projects
   resources :films
   get 'login' => 'sessions#new'
-  get 'projects' => 'projects#index'
+  get 'projects' => 'projects#index', as: 'overview'
   get '/videoplayback', :to => redirect('/videoplayback.mp4')
   get 'credits' => 'pages#credits'
   # The priority is based upon order of creation: first created -> highest priority.

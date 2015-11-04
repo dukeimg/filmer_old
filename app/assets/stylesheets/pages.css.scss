@@ -37,7 +37,6 @@
 .landing {
   background-color: transparent;
   border: none;
-  height: 60px;
 
   .nav>li>a {
     color: #fff;
@@ -49,6 +48,10 @@
   color: #fff;
   text-rendering: optimizelegibility;
   line-height: 1.1;
+
+  h3 {
+    color: white;
+  }
 }
 
 .btn-landing {

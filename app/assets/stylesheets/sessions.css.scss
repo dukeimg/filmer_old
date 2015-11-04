@@ -3,11 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .btn-back {
   position: absolute;
-  top: 20px;
+  top: 70px;
   left: 20px;
   text-decoration: none;
+  color: #ff5a5f;
 
   &:hover {
     text-decoration: none;
+  }
+}
+
+.nav-tabs {
+  li a{
+    color: #ff5a5f;
   }
 }
