@@ -1,8 +1,8 @@
 -title t('overview')
 =render('layouts/header')
 .container-fluid
-  .row.profile-card
-    .col-sm-4.flexbox.flex-center
-      .avatar.avatar-large
+  .row
+    .col-sm-4.flexbox.flex-center.profile-card
+      %img.avatar.avatar-large{:src => image_url("avatar-placeholder.png")}
     .col-sm-8
 =render('layouts/footer')

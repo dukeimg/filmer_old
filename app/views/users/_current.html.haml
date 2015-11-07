@@ -1,0 +1,10 @@
+.container-fluid
+  .row
+    .col-sm-6.text-right
+      =image_tag @user.avatar_link, :class => 'avatar avatar-large'
+    .col-sm-6
+      .user-info
+        %h1 #{@user.name}
+        %i @#{@user.username}
+  .row.flexbox.flex-center
+    =link_to t('edit'), edit_user_path, :class => 'btn btn-default'

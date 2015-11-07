@@ -1,0 +1,34 @@
+-title t('edit-profile')
+=render('layouts/header')
+.container-margin.flexbox.flex-center
+  .container
+    .row
+      = form_for @user, :html => {:class => "form-horizontal"} do |f|
+        %h1.underline= t('edit-profile')
+        .row.text-center
+          .form-group
+            %label.col-sm-6.text-right.control-label{:for => 'name'}= t('name')
+            .col-sm-5
+              = f.text_field :name, :placeholder => t("name"), :class => "form-control"
+          .form-group
+            %label.col-sm-6.text-right.control-label{:for => 'email'}= t('email')
+            .col-sm-5
+              = f.email_field :email, :placeholder => t("email"), :class => "form-control"
+        %h1.underline= t('edit-password')
+        .row.text-center
+          = form_for @user, :html => {:class => "form-horizontal"} do |f|
+            .form-group
+              %label.col-sm-6.text-right.control-label{:for => 'password'}= t('old-password')
+              .col-sm-5
+                = f.password_field :old_password, :placeholder => t("password"), :class => "form-control"
+            .form-group
+              %label.col-sm-6.text-right.control-label{:for => 'password'}= t('new-password')
+              .col-sm-5
+                = f.password_field :password, :placeholder => t("password"), :class => "form-control"
+            .form-group
+              %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password-again')
+              .col-sm-5
+                = f.password_field :password_confirmation, :placeholder => t("password"), :class => "form-control"
+          .row.text-center.container-margin
+            = f.submit t('save'), :class => "btn btn-default"
+=render('layouts/footer')

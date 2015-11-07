@@ -132,6 +132,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
   haml
   http_accept_language

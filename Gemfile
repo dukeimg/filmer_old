@@ -48,3 +48,7 @@ gem 'rails_12factor', group: :production
 gem 'haml'
 
 gem 'bcrypt'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails', '~> 4.1.0'
+

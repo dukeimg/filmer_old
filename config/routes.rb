@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :projects
   resources :films
   get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  get 'logout' => 'sessions#destroy'
   get 'projects' => 'projects#index', as: 'overview'
   get '/videoplayback', :to => redirect('/videoplayback.mp4')
   get 'credits' => 'pages#credits'
