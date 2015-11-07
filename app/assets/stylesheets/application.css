@@ -15,6 +15,10 @@
  *= require jquery-ui
  */
 
+.container {
+    width: 970px;
+}
+
 body {
     height: 100vh;
     overflow-x: hidden;

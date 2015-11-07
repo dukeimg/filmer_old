@@ -6,7 +6,7 @@
       -@suggestions.each do |s|
         .suggestion
           %p= s.content
-          %i= s.sign
+          %i @#{s.sign}
           %br
           %i= s.created_at
   .row
@@ -16,8 +16,6 @@
           %label.control-label{:for => 'name'}= t('your-suggestion')
           = f.text_area :content, :placeholder => t("suggestion-example"), :class => "form-control"
       .row.container-margin
-        .col-sm-8
-          = f.text_field :sign, :placeholder => t("name"), :class => "form-control", :style => 'margin-top: 4px'
-        .col-sm-4
-          = f.submit t("send"), :class => "btn btn-default"
+        .col-sm-2.col-sm-offset-10
+          = f.submit t("send"), :class => "btn btn-default", :id => 'suggestion_submit'
 =render('layouts/footer')
