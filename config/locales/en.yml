@@ -41,3 +41,8 @@ en:
   overview: "Overview"
   edit: "Edit"
   save: "Save"
+  suggestions: "Suggestions"
+  suggest: "Suggest"
+  your-suggestion: "Your suggestion"
+  suggestion-example: "Example: need more kitties!"
+  send: "Send"

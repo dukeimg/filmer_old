@@ -1,0 +1,23 @@
+=render('layouts/header')
+.container
+  .row
+    %h1.text-center= t('suggestions')
+    #suggestions
+      -@suggestions.each do |s|
+        .suggestion
+          %p= s.content
+          %i= s.sign
+          %br
+          %i= s.created_at
+  .row
+    =form_for @suggestion, remote: true do |f|
+      .col-sm-12
+        .form-group
+          %label.control-label{:for => 'name'}= t('your-suggestion')
+          = f.text_area :content, :placeholder => t("suggestion-example"), :class => "form-control"
+      .row.container-margin
+        .col-sm-8
+          = f.text_field :sign, :placeholder => t("name"), :class => "form-control", :style => 'margin-top: 4px'
+        .col-sm-4
+          = f.submit t("send"), :class => "btn btn-default"
+=render('layouts/footer')

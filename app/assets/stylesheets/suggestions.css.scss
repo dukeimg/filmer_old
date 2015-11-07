@@ -1,0 +1,13 @@
+// Place all the styles related to the suggestions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.suggestion{
+  border: 1px solid #ff5a5f;
+  margin: 18px 0;
+  border-radius: 5px;
+  padding-left: 10px;
+
+  i {
+    font-size: 0.8em;
+  }
+}
