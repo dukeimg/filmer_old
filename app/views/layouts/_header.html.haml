@@ -6,6 +6,8 @@
     %nav.collapse.navbar-collapse
       %ul.nav.navbar-nav
       %ul.nav.navbar-nav.navbar-right
+        %li
+          =link_to t('suggest'), beta_path
         -if current_user
           %li.dropdown
             %a.dropdown-toggle{:href => '#', :type => 'button', 'data-toggle' => "dropdown", 'aria-haspopup' => "true"} #{image_tag current_user.avatar_link} #{current_user.name} <span class='caret'></span>
