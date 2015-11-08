@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   root 'pages#index'
-  resources :users
   resources :projects
   resources :films
-  get 'login' => 'sessions#new'
-  post 'login' => 'sessions#create'
-  get 'logout' => 'sessions#destroy'
   get 'projects' => 'projects#index', as: 'overview'
   get '/videoplayback', :to => redirect('/videoplayback.mp4')
   get 'credits' => 'pages#credits'

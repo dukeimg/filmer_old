@@ -1,5 +1,5 @@
 %header.navbar.navbar-default
-  .container-fluid{:style => 'padding-right:0'}
+  .container-fluid
     .navbar-header
       %a.navbar-brand{ :href => root_path}
         .logo-brand= t('Filmer')
@@ -8,13 +8,13 @@
       %ul.nav.navbar-nav.navbar-right
         %li
           =link_to t('suggest'), beta_path
-        -if current_user
+        -if user_signed_in?
           %li.dropdown
             %a.dropdown-toggle{:href => '#', :type => 'button', 'data-toggle' => "dropdown", 'aria-haspopup' => "true"} #{image_tag current_user.avatar_link} #{current_user.name} <span class='caret'></span>
             %ul.dropdown-menu
               %li
-                %a{ :href => logout_path}= t('sign-out')
+                %a{ :href => destroy_user_session_path, :method => :delete}= t('sign-out')
                 =link_to t('profile'), current_user
         -else
           %li
-            %a{ :href => login_path}= t('sign-in')
+            %a{ :href => new_user_session_path}= t('sign-in')

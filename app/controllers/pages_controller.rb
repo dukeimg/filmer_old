@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   layout "landing", only: [:index]
 
   def index
-    if current_user
+    if user_signed_in?
       redirect_to projects_url
     end
   end

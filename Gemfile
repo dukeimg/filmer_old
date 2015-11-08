@@ -52,3 +52,5 @@ gem 'bcrypt'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 
+gem 'devise'
+

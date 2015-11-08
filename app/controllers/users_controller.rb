@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
 
+
   def new
     @user = User.new
   end
@@ -46,7 +47,7 @@ class UsersController < ApplicationController
 
   def user_params
     defaults = {avatar_link: 'avatar-placeholder.png'}
-    params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :avatar_link, :old_password).merge(defaults)
+    params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :avatar_link).merge(defaults)
   end
 
   def user_edit_params

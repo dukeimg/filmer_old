@@ -17,14 +17,18 @@
         .tab-content
           .tab-pane.active#login{ :role => 'tabpanel'}
             %h1= t('sign-in')
-            = form_for(:session, url: login_path) do |f|
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
               .form-group
-                = f.text_field :username, :placeholder => t("username"), :class => "form-control"
+                = f.label :username
+                = f.text_field :username, autofocus: true, :placeholder => t("username"), :class => "form-control"
               .form-group
+                = f.label :password
                 = f.password_field :password, :placeholder => t("password"), :class => "form-control"
+                .text-right
+                  = render "devise/shared/links"
               = f.submit t("sign-in"), :class => "btn btn-default"
           .tab-pane#register{ :role => 'tabpanel'}
-            %h1= t('sign-up')
-            .flexbox.flex-center{:style => 'height: 139px'}
-              %a.btn.btn-squared.btn-default.flexbox.flex-center{ :href => new_user_path}= t('be-number')+(User.count+1).to_s
+            %h2.text-center= t('sign-up')
+            .flexbox.flex-center{:style => 'height: 216px'}
+              %a.btn.btn-squared.btn-default.flexbox.flex-center{ :href => new_registration_path(resource_name)}= t('be-number')+(User.count+1).to_s
 =render('layouts/footer')
