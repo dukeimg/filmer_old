@@ -7,8 +7,6 @@
         .suggestion
           %p= s.content
           %i @#{s.sign}
-          %br
-          %i= s.created_at
   .row
     =form_for @suggestion, remote: true do |f|
       .col-sm-12
