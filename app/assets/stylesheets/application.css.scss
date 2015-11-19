@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  *= require jquery-ui
+ *= require jquery.fileupload
+ *= require jquery.fileupload-ui
  */
 @import "variables";
 
@@ -190,4 +192,12 @@ footer {
   li a{
     color: $secondary_color;
   }
+}
+
+.btn-close {
+  position: relative;
+  float: right;
+  color: $primary_color;
+  font-size: 2em;
+  cursor: pointer;
 }

@@ -25,7 +25,9 @@ ActiveRecord::Schema.define(version: 20151114141204) do
 
   create_table "suggestions", force: true do |t|
     t.text     "content"
-    t.string   "sign"
+    t.string   "avatar"
+    t.string   "name"
+    t.string   "username"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

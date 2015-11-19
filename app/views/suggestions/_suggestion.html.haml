@@ -1,3 +1,5 @@
 .suggestion
+  =image_tag @suggestion.avatar, :class => 'avatar'
+  %b #{@suggestion.name}
+  %small @#{@suggestion.username}
   %p= @suggestion.content
-  %i @#{@suggestion.sign}

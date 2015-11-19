@@ -13,6 +13,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def avatar_popup
+
+  end
+
   private
 
   def user_params

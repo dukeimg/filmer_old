@@ -5,9 +5,10 @@
     #suggestions
       -@suggestions.each do |s|
         .suggestion
+          =image_tag s.avatar, :class => 'avatar'
+          %b #{s.name}
+          %small @#{s.username}
           %p= s.content
-          =image_tag s.avatar
-          %i @#{s.sign}
   .row
     =form_for @suggestion, remote: true do |f|
       .col-sm-12

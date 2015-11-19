@@ -16,7 +16,7 @@ class SuggestionsController < ApplicationController
   private
 
   def suggestion_params
-    defaults = {sign: current_user.username, avatar: current_user.avatar}
-    params.require(:suggestion).permit(:content, :sign, :avatar).merge(defaults)
+    defaults = {username: current_user.username, avatar: current_user.avatar.url(:thumb), name: current_user.name}
+    params.require(:suggestion).permit(:content, :username, :name, :avatar).merge(defaults)
   end
 end
