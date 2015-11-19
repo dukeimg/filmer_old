@@ -1,12 +1,10 @@
-// Place all the styles related to the users controller here.
+// Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.form-horizontal {
-  .row, .form-group {
-    margin-top: 18px;
-  }
+.profile-card {
+  height: 300px;
 }
 
-.user-info {
-  margin-top: 100px;
+.avatar {
+  border-radius: 50%;
 }

@@ -1,8 +1,7 @@
 .container-fluid
-  .row
-    .col-sm-6.text-right
-      =image_tag @user.avatar_link, :class => 'avatar avatar-large'
-    .col-sm-6
+  .row.container-margin
+    .col-xs-12.text-center
+      =image_tag @user.avatar.url(:medium), :class => 'avatar'
       .user-info
-        %h1= @user.name
+        %h1 #{@user.name}
         %i @#{@user.username}

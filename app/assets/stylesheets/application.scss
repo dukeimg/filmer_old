@@ -76,6 +76,11 @@ footer {
     align-items: center;
 }
 
+.flex-top {
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .container-fullscreen {
     height: 100%;
     width: 100%;
@@ -139,20 +144,30 @@ footer {
     background-color: white;
 }
 
-.profile-card {
-    height: 300px;
-}
-
-.avatar {
-    border-radius: 50%;
-}
-
-.avatar-large {
-    height: 250px;
-    width: 250px;
-    margin: 25px 0;
-}
-
 .underline {
     border-bottom: 1px solid #ff5a5f;
+}
+
+.panel-heading {
+    margin: 0;
+}
+
+.popup {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.50);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 100;
+}
+
+.popup-inner {
+    width: 650px;
+    background-color: white;
+    padding: 18px;
 }

@@ -26,3 +26,7 @@ ru:
   suggestion-example: "Пример: нужно больше котеек!"
   send: "Отправить"
   requirements: "Требования"
+  password-length: "Минимальная длина: "
+  symbols: " символов"
+  we-need-current-password: "Для применения изменений нам нужен ваш текущий пароль"
+  change: "Изменить"

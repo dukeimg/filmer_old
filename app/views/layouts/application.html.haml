@@ -13,9 +13,4 @@
     %script{ :src => "https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"}
 
   %body
-
-    -if notice
-      %p.alert.alert-success= notice
-    -if alert
-      %p.alert.alert-danger= alert
     = yield

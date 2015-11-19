@@ -23,13 +23,9 @@
           %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password')
           .col-sm-6
             = f.password_field :password,
-               :placeholder => t("password"),
+               :placeholder => "#{t('password-length')} #{@minimum_password_length} #{t('symbols')}",
                :class => "form-control",
-               autocomplete: "off",
-               'data-toggle' => 'tooltip',
-               :title => t('requirements'),
-               'data-placement' => 'top auto',
-               'data-content' => "#{@minimum_password_length}"
+               autocomplete: "off"
         .form-group
           %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password-again')
           .col-sm-6

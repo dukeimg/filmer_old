@@ -47,3 +47,7 @@ en:
   suggestion-example: "Example: need more kitties!"
   send: "Send"
   requirements: "Requirements"
+  password-length: "Minimum length: "
+  symbols: " symbols"
+  we-need-current-password: "We need your current password to confirm your changes"
+  change: "Change"
