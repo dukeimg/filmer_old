@@ -1,6 +1,7 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
 
 .jumbotron {
   background-color: transparent;
@@ -26,7 +27,7 @@
 
 .pages-navbar {
   margin: 0;
-  background-color: #ff5a5f;
+  background-color: $primary_color;
   border: none;
   height: 60px;
 

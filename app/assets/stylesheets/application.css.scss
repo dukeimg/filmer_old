@@ -14,6 +14,7 @@
  *= require_self
  *= require jquery-ui
  */
+@import "variables";
 
 .container {
     width: 970px;
@@ -25,12 +26,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #ff5a5f;
+    color: $primary_color;
     margin: 20px 0;
 }
 
 a {
-    color: #ff5a5f;
+    color: $secondary_color;
 }
 
 a:hover {
@@ -40,7 +41,7 @@ a:hover {
 
 footer {
     width: 100%;
-    background-color: #ff5a5f;
+    background-color: $primary_color;
     padding-top: 18px;
 }
 
@@ -94,13 +95,14 @@ footer {
     border-radius: 0;
     color: white;
     padding: 9px 27px;
-    background-color: #ff5a5f;
+    background-color: $primary_color;
     font-size: 16px;
     font-weight: bold;
+    border: 1px solid $secondary_color;
 }
 
 .btn-default:hover {
-    background-color: #e6565c;
+    background-color: $primary_color;
     color: white;
 }
 
@@ -128,7 +130,7 @@ footer {
 }
 
 .navbar-default {
-    background-color: #ff5a5f;
+    background-color: $primary_color;
     border: none;
     width: 100%;
     border-radius: 0;
@@ -140,12 +142,12 @@ footer {
 }
 
 .navbar-default .navbar-nav>li>a:hover {
-    color: #ff5a5f;
+    color: $secondary_color;
     background-color: white;
 }
 
 .underline {
-    border-bottom: 1px solid #ff5a5f;
+    border-bottom: 1px solid $secondary_color;
 }
 
 .panel-heading {
@@ -170,4 +172,22 @@ footer {
     width: 650px;
     background-color: white;
     padding: 18px;
+}
+
+.btn-back {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  text-decoration: none;
+  color: $secondary_color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.nav-tabs {
+  li a{
+    color: $secondary_color;
+  }
 }

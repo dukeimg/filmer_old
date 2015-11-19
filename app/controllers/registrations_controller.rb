@@ -11,6 +11,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   def after_update_path_for(resource)
     user_path(current_user)
-    puts 'hey'
+  end
+
+  def after_sign_up_path_for(resource)
+    root_path
   end
 end

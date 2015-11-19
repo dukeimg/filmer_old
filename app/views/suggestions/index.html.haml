@@ -6,6 +6,7 @@
       -@suggestions.each do |s|
         .suggestion
           %p= s.content
+          =image_tag s.avatar
           %i @#{s.sign}
   .row
     =form_for @suggestion, remote: true do |f|
