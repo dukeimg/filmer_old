@@ -15,6 +15,7 @@
  *= require jquery-ui
  *= require jquery.fileupload
  *= require jquery.fileupload-ui
+ *= require jquery.Jcrop
  */
 @import "variables";
 
@@ -171,14 +172,15 @@ footer {
 }
 
 .popup-inner {
-    width: 650px;
+    min-width: 650px;
     background-color: white;
     padding: 18px;
+  max-height: 90%;
 }
 
 .btn-back {
   position: absolute;
-  top: 70px;
+  top: 60px;
   left: 20px;
   text-decoration: none;
   color: $secondary_color;
@@ -200,4 +202,5 @@ footer {
   color: $primary_color;
   font-size: 2em;
   cursor: pointer;
+  margin: 20px 0;
 }

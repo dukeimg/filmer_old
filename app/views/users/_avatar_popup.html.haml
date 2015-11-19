@@ -1,4 +1,7 @@
 .popup
   .popup-inner#popup
-    %span.btn-close.glyphicon.glyphicon-remove{'aria-hidden' => true}
+    .container-fluid
+      .row
+        %h2.image-crop-title= t('edit-profile-picture')
+        %span.btn-close.glyphicon.glyphicon-remove{'aria-hidden' => true}
     =render('users/avatar')

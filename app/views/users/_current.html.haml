@@ -2,7 +2,7 @@
   .row.container-margin
     .col-xs-12.text-center
       =link_to(avatar_popup_path, :remote => true) do
-        =image_tag @user.avatar.url(:medium), :class => 'avatar'
+        =image_tag @user.avatar.url(:medium), :class => 'avatar', :id => 'avatar'
       .user-info
         %h1 #{@user.name}
         %i @#{@user.username}

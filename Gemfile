@@ -58,3 +58,5 @@ gem "paperclip", "~> 4.3"
 
 gem "jquery-fileupload-rails"
 
+gem 'jcrop-rails-v2'
+

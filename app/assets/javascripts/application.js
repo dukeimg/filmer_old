@@ -14,5 +14,6 @@
 //= require turbolinks
 //= require jquery-ui
 //= require jquery_ujs
-//= require jquery-fileupload
+//= require jquery-fileupload/basic
+//= require jquery.Jcrop
 //= require_tree .
