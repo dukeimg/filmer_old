@@ -6,7 +6,7 @@
   .text-center
     %p= t('crop-message')
     .flexbox.flex-center
-      =image_tag current_user.avatar.url, :class => 'img-responsive', :id => 'cropbox', :style => 'max-height: 600px;'
+      =image_tag current_user.avatar.url(:preview), :class => 'img-responsive', :id => 'cropbox'
   =form_for current_user do |f|
     -for attribute in [:crop_x, :crop_y, :crop_w, :crop_h]
       = f.hidden_field attribute, :id => attribute
@@ -21,9 +21,10 @@
     });
 
     function update_crop(coords) {
-      $('#crop_x').val(coords.x);
-      $('#crop_y').val(coords.y);
-      $('#crop_h').val(coords.h);
-      $('#crop_w').val(coords.w);
-      console.log(coords);
+      var ratio = #{current_user.avatar_geometry(:original).width / current_user.avatar_geometry(:preview).width}
+      $('#crop_x').val(Math.round(coords.x * ratio));
+      $('#crop_y').val(Math.round(coords.y * ratio));
+      $('#crop_h').val(Math.round(coords.h * ratio));
+      $('#crop_w').val(Math.round(coords.w * ratio));
+      console.log(ratio);
     }
