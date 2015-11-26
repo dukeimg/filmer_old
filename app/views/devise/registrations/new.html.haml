@@ -5,30 +5,30 @@
     %div= t('back')
   .container
     .row.text-center
-      %h1= t('sign-up')
+      %h1= t('users.sign-up')
       = form_for resource, as: resource_name, url: registration_path(resource_name), :html => {:class => "form-horizontal"} do |f|
         .form-group
-          %label.col-sm-6.text-right.control-label{:for => 'name'}= t('what-is-your-name')
+          %label.col-sm-6.text-right.control-label{:for => 'name'}= t('users.what-is-your-name')
           .col-sm-6
-            = f.text_field :name, :placeholder => t("name"), :class => "form-control"
+            = f.text_field :name, :placeholder => t("users.name"), :class => "form-control"
         .form-group
-          %label.col-sm-6.text-right.control-label{:for => 'username'}= t('choose-an-username')
+          %label.col-sm-6.text-right.control-label{:for => 'username'}= t('users.choose-an-username')
           .col-sm-6
-            = f.text_field :username, :placeholder => t("username"), :class => "form-control"
+            = f.text_field :username, :placeholder => t("users.username"), :class => "form-control"
         .form-group
-          %label.col-sm-6.text-right.control-label{:for => 'email'}= t('email')
+          %label.col-sm-6.text-right.control-label{:for => 'email'}= t('users.email')
           .col-sm-6
-            = f.email_field :email, :placeholder => t("email"), :class => "form-control"
+            = f.email_field :email, :placeholder => t("users.email"), :class => "form-control"
         .form-group
-          %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password')
+          %label.col-sm-6.text-right.control-label{:for => 'password'}= t('users.password')
           .col-sm-6
             = f.password_field :password,
-               :placeholder => "#{t('password-length')} #{@minimum_password_length} #{t('symbols')}",
+               :placeholder => "#{t('users.password-length')} #{@minimum_password_length} #{t('users.symbols')}",
                :class => "form-control",
                autocomplete: "off"
         .form-group
-          %label.col-sm-6.text-right.control-label{:for => 'password'}= t('password-again')
+          %label.col-sm-6.text-right.control-label{:for => 'password'}= t('users.password-again')
           .col-sm-6
-            = f.password_field :password_confirmation, :placeholder => t("password"), :class => "form-control", autocomplete: "off"
-        = f.submit t("sign-up"), :class => "btn btn-default"
+            = f.password_field :password_confirmation, :placeholder => t("users.password"), :class => "form-control", autocomplete: "off"
+        = f.submit t("users.sign-up"), :class => "btn btn-default"
 =render('layouts/footer')

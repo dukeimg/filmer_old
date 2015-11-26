@@ -5,7 +5,17 @@
       %source{:src => '/videoplayback'}
   .container
     .welcome.text-center
-      %h1.tagline= t('tagline')
-      %h3= t('slogan')
+      %h1.tagline= t('landing.tagline')
+      %h3= t('landing.slogan')
       .container{ :style => "margin-top: 25px;"}
-        %a.btn.btn-landing{ :href => new_user_session_path}= t('get-started')
+        %a.btn.btn-landing{ :href => new_user_session_path}= t('landing.get-started')
+.container
+  .intro.center-block
+    .text-center
+      =image_tag 'rails-logo.png', :class => 'rails-logo'
+      %p
+        #{t('landing.intro-text')}
+        %a{:href => 'https://github.com/dukeimg/filmer'}
+          %i.fa.fa-github
+          GitHub
+      =link_to t('landing.learn-more'), about_path, :class => 'btn btn-default'

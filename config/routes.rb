@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :films
   get 'projects' => 'projects#index', as: 'overview'
   get '/videoplayback', :to => redirect('/videoplayback.mp4')
-  get 'credits' => 'pages#credits'
+  get 'about' => 'pages#about'
   resources :suggestions
   get 'beta' => 'suggestions#index'
   resources :users

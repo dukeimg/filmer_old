@@ -1,12 +1,13 @@
 %footer
   .container.footer-main
     .row
-      .col-sm-4
+      .col-xs-4
         %h3= t('filmer')
         %ul
+          -if !user_signed_in?
+            %li
+              %a{ :href => new_user_session_path}= t('users.sign-in')
           %li
-            %a{ :href => new_user_session_path}= t('sign-in')
-          %li
-            %a{ :href => 'credits'}= t('copyrights')
+            %a{ :href => about_path}= t('copyrights')
   .container-fluid.footer-legal
-    %p.text-left.copyrights= t('copyright')
+    %p.text-center.copyrights= t('copyright')

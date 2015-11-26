@@ -13,8 +13,8 @@
             %a.dropdown-toggle{:href => '#', :type => 'button', 'data-toggle' => "dropdown", 'aria-haspopup' => "true", :style => 'padding: 0 15px'} #{image_tag current_user.avatar.url(:thumb), :class => 'avatar'} #{current_user.name} <span class='caret'></span>
             %ul.dropdown-menu
               %li
-                =link_to t('sign-out'), destroy_user_session_path, method: :delete
-                =link_to t('profile'), current_user
+                =link_to t('users.sign-out'), destroy_user_session_path, method: :delete
+                =link_to t('users.profile'), current_user
         -else
           %li
             %a{ :href => new_user_session_path}= t('sign-in')

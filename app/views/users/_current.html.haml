@@ -6,5 +6,4 @@
       .user-info
         %h1 #{@user.name}
         %i @#{@user.username}
-      .container-margin
-        =link_to t('edit'), edit_user_registration_path, :class => 'btn btn-default'
+      =link_to t('edit'), edit_user_registration_path, :class => 'btn btn-default'

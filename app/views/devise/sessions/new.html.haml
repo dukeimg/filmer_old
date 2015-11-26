@@ -10,25 +10,25 @@
         //nav tabs
         %ul.nav.nav-tabs{ :role => 'tablist', :style => 'margin-top: 20px'}
           %li.active{ :role => 'presentation'}
-            %a{ :href => '#login', 'aria-controls' => 'login', :role => 'tab', 'data-toggle' => 'tab'}= t('sign-in')
+            %a{ :href => '#login', 'aria-controls' => 'login', :role => 'tab', 'data-toggle' => 'tab'}= t('users.sign-in')
           %li{ :role => 'presentation'}
-            %a{ :href => '#register', 'aria-controls' => 'register', :role => 'tab', 'data-toggle' => 'tab'}= t('sign-up')
+            %a{ :href => '#register', 'aria-controls' => 'register', :role => 'tab', 'data-toggle' => 'tab'}= t('users.sign-up')
         //tab panels
         .tab-content
           .tab-pane.active#login{ :role => 'tabpanel'}
-            %h1= t('sign-in')
+            %h1= t('users.sign-in')
             = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
               .form-group
-                = f.label :username
-                = f.text_field :username, autofocus: true, :placeholder => t("username"), :class => "form-control"
+                = f.label :username, t('users.username')
+                = f.text_field :username, autofocus: true, :placeholder => t("users.username"), :class => "form-control"
               .form-group
-                = f.label :password
-                = f.password_field :password, :placeholder => t("password"), :class => "form-control"
-                .text-right
+                = f.label :password, t('users.password')
+                = f.password_field :password, :placeholder => t("users.password"), :class => "form-control"
+                .text-right.container-margin
                   = render "devise/shared/links"
-              = f.submit t("sign-in"), :class => "btn btn-default"
+              = f.submit t("users.sign-in"), :class => "btn btn-default"
           .tab-pane#register{ :role => 'tabpanel'}
-            %h2.text-center= t('sign-up')
-            .flexbox.flex-center{:style => 'height: 216px'}
-              %a.btn.btn-squared.btn-default.flexbox.flex-center{ :href => new_registration_path(resource_name)}= t('be-number')+(User.count+1).to_s
+            %h2.text-center= t('users.sign-up')
+            .container-margin{:style => 'height: 251px'}
+              %a.btn.btn-squared.btn-default.flexbox.flex-center{ :href => new_registration_path(resource_name)}= t('users.be-number')+(User.count+1).to_s
 =render('layouts/footer')

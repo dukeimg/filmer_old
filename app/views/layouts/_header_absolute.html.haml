@@ -13,8 +13,8 @@
               %li
                 =link_to t('suggest'), beta_path
               %li
-                %a{ :href => destroy_user_session_path, :method => :delete}= t('sign-out')
-                =link_to t('profile'), current_user
+                %a{ :href => destroy_user_session_path, :method => :delete}= t('users.sign-out')
+                =link_to t('users.profile'), current_user
         -else
           %li
-            %a{ :href => new_user_session_path}= t('sign-in')
+            %a{ :href => new_user_session_path}= t('users.sign-in')
