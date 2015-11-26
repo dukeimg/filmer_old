@@ -7,7 +7,8 @@ gem 'rails', '4.1.1'
 gem 'sqlite3', group: :development
 gem 'pg', '0.18.1', group: :production
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '~> 5.0.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -59,4 +60,6 @@ gem "paperclip", "~> 4.3"
 gem "jquery-fileupload-rails"
 
 gem 'jcrop-rails-v2'
+
+gem 'autoprefixer-rails'
 

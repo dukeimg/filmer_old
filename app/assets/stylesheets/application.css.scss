@@ -5,5 +5,7 @@
  *= require jquery.fileupload-ui
  *= require jquery.Jcrop
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
 @import "filmer/*";
 @import "fontawesome/font-awesome";
