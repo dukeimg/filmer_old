@@ -10,15 +10,6 @@
     %meta{ :charset => "utf-8"}
 
   %body
-    %header.navbar.navbar-default.landing
-      .container-fluid
-        .navbar-header
-          %a.navbar-brand{ :href => "#"}
-            .logo-brand= t('Filmer')
-        %nav.collapse.navbar-collapse
-          %ul.nav.navbar-nav
-          %ul.nav.navbar-nav.navbar-right
-            %li
-              %a{ :href => new_user_session_path}= t('users.sign-in')
+    =render('layouts/header_landing')
     = yield
     =render('layouts/footer')

@@ -57,6 +57,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     haml (4.0.7)
       tilt
     http_accept_language (2.0.5)
@@ -167,6 +169,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   coffee-script-source (= 1.8.0)
   devise
+  font-awesome-sass (~> 4.4.0)
   haml
   http_accept_language
   jbuilder (~> 2.0)

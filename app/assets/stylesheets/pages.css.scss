@@ -1,0 +1,113 @@
+.jumbotron {
+  background-color: transparent;
+  height: 550px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-background {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  width: 100%;
+  height: 600px;
+  filter: brightness(70%);
+  -webkit-filter: brightness(70%);
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.welcome {
+  display: block;
+  color: #fff;
+  text-rendering: optimizelegibility;
+  line-height: 1.1;
+
+  h3 {
+    color: white;
+  }
+}
+
+.intro-card {
+  padding: 50px;
+  margin: 50px auto;
+  vertical-align: middle;
+  font-size: 1.65rem;
+  line-height: 3rem;
+  width: 800px;
+  background-color: #fff;
+
+  &.landing-card {
+    margin-top: 100px;
+  }
+
+  &.black {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .rails-logo {
+    height: 200px;
+  }
+}
+
+//about
+
+.triangle {
+  height: 30px;
+  opacity: 0;
+  position: absolute;
+}
+
+.dukeimg-background {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: #111111;
+  z-index: -1;
+}
+
+.dukeimg {
+  height: 100%;
+  color: $dukeimg_card_color;
+
+  #{headings(1,6)} {
+    color: $dukeimg_card_color
+  }
+
+  a {
+    color: $dukeimg_card_color;
+  }
+}
+
+/*ANIMATIONS*/
+
+@keyframes triangle-opacity{
+  20%{
+    opacity: 1
+  }
+  50%{
+    opacity: 0.7;
+  }
+  80%{
+    opacity: 1
+  }
+}
+
+@keyframes fly-triangle{
+  0%{
+  }
+  100%{
+    transform: translate(1250%, -600px) rotate(720deg) rotateY(-520deg);
+  }
+}
+

@@ -1,0 +1,31 @@
+-title(t('viktor-danilov'))
+=render('layouts/header_landing')
+.dukeimg-background
+  - rand(50...100).times do |n|
+    -animation_time = rand(3...20)
+    %img{:class => "triangle tri#{n}",
+    :src => "https://dl.dropboxusercontent.com/u/100656262/triangle.png",
+    :style => "top: #{rand(10...100)}%; left: #{rand(100)}%; animation: fly-triangle #{animation_time}s infinite linear, triangle-opacity #{animation_time}s infinite linear;"}
+.dukeimg.flexbox.flex-center
+  .intro-card.black
+    %h1.text-center= t('viktor-danilov')
+    .container-margin
+      .col-xs-6.text-right
+        %img{:class => "dukeimg-avatar img-circle",
+         :src => "https://pp.vk.me/c624822/v624822432/5c1fe/CwX9k4uN0YU.jpg",
+         :style => 'width: 160px;'}
+      .col-xs-6
+        %p
+          =icon('envelope')
+          %a{:href => 'mailto:duke.img@gmail.com'} Email
+        %p
+          =icon('github')
+          %a{:href => 'https://github.com/dukeimg'} GitHub
+        %p
+          =icon('linkedin')
+          %a{:href => 'https://www.linkedin.com/in/dukeimg'} LinkedIn
+        %p
+          =icon('vk')
+          %a{:href => 'https://vk.com/dukeimg'} VK
+
+=render('layouts/footer')

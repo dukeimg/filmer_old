@@ -36,8 +36,21 @@ ru:
       tagline: "Храните свои истории здесь"
       get-started: "Приступим"
 
+  about:
+      about: "Про Filmer"
+      what: "Что?"
+      why: "Почему?"
+      how: "Как?"
+      what-text: "Filmer — приложение, созданное с помощью Ruby on Rails. Оно бесплатное и его исходный код полностью открыт. Вы можете посмотреть его на "
+      deployed-to: "Развёрнуто на "
+      why-text: "Зачем я его сделал? Я хочу научиться создавать сложные приложения, используя Ruby on Rails, и развить свои навыки."
+      how-text: "Как сказано выше, это Ruby on Rails приложение. Frontend выполнен с помощью Twitter Bootstrap. Базы данных: SQLite для среды разработки, и Postgresql для продакшена (применён адаптер)."
+
   warning: "Внимание"
-  copyright: "Filmer © 2015 Виктор Данилов"
+  projects: "Проекты"
+  follow-the-author: "Следите за автором"
+  copyright: "Filmer © 2015 "
+  viktor-danilov: "Виктор Данилов"
   Filmer: "Filmer"
   back: "Назад"
   copyrights: "Авторские права"

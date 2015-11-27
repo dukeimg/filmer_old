@@ -7,5 +7,7 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "filmer/*";
-@import "fontawesome/font-awesome";
+@import "variables";
+@import "*";
+@import "font-awesome-sprockets";
+@import "font-awesome";

@@ -63,3 +63,5 @@ gem 'jcrop-rails-v2'
 
 gem 'autoprefixer-rails'
 
+gem 'font-awesome-sass', '~> 4.4.0'
+

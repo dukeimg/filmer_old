@@ -1,7 +1,19 @@
+-title(t('about.about'))
 =render('layouts/header')
 .container-fluid
   .row
-    .text-center
+    .intro-card
+      %h2.underline.text-center= t('about.about')
+      %h3= t('about.what')
+      %p
+        =t('about.what-text')
+        =t('about.deployed-to')
+      %h3= t('about.why')
+      %p= t('about.why-text')
+      %h3= t('about.how')
+      %p= t('about.how-text')
+  .row
+    .intro-card.text-center
       %h2= t('copyrights')
       %p
         %span Icons made by

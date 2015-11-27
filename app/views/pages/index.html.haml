@@ -10,12 +10,12 @@
       .container{ :style => "margin-top: 25px;"}
         %a.btn.btn-landing{ :href => new_user_session_path}= t('landing.get-started')
 .container
-  .intro.center-block
+  .intro-card.center-block.landing-card
     .text-center
       =image_tag 'rails-logo.png', :class => 'rails-logo'
       %p
         #{t('landing.intro-text')}
         %a{:href => 'https://github.com/dukeimg/filmer'}
-          %i.fa.fa-github
+          =icon('github')
           GitHub
       =link_to t('landing.learn-more'), about_path, :class => 'btn btn-default'

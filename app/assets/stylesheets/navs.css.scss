@@ -1,5 +1,3 @@
-@import 'variables';
-
 .navbar-default {
   background-color: $primary_color;
   border: none;
@@ -37,6 +35,8 @@
 .landing {
   background-color: transparent;
   border: none;
+  position: absolute;
+  top: 0;
 
   .nav>li>a {
     color: #fff !important;

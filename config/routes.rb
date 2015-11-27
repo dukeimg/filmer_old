@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'projects' => 'projects#index', as: 'overview'
   get '/videoplayback', :to => redirect('/videoplayback.mp4')
   get 'about' => 'pages#about'
+  get 'dukeimg' => 'pages#dukeimg'
   resources :suggestions
   get 'beta' => 'suggestions#index'
   resources :users

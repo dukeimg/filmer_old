@@ -1,16 +1,14 @@
-@import "variables";
-
 footer {
   width: 100%;
   background-color: $primary_color;
   padding: 50px 0;
 
+  a, i {
+    color: white;
+  }
+
   .footer-main {
     font-size: 1.5em;
-
-    a {
-      color: white;
-    }
 
     ul {
       list-style: none;

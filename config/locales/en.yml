@@ -57,8 +57,21 @@ en:
     tagline: "Collect your stories here"
     get-started: "Get Started"
 
+  about:
+      about: "About"
+      what: "What?"
+      why: "Why?"
+      how: "How?"
+      what-text: "Filmer is an app built using Ruby on Rails. It's free & completely open source. You can check the source on "
+      deployed-to: "Deployed to "
+      why-text: "So why am I building? I want to try and learn how to develop a large scale web-application using Rails and improve my skills."
+      how-text: "As stated above it's a Ruby on Rails application. Frontend is developed using Twitter Bootstrap. Database is SQLite for development and Postgresql for production using adapter."
+
   warning: "Warning"
-  copyright: "Filmer © 2015 Viktor Danilov"
+  projects: "Projects"
+  follow-the-author: "Follow the author"
+  copyright: "Filmer © 2015 "
+  viktor-danilov: "Viktor Danilov"
   Filmer: "Filmer"
   back: "Back"
   copyrights: "Copyrights"

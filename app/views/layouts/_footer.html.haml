@@ -1,13 +1,31 @@
 %footer
   .container.footer-main
     .row
-      .col-xs-4
+      .col-xs-6
         %h3= t('filmer')
         %ul
           -if !user_signed_in?
             %li
               %a{ :href => new_user_session_path}= t('users.sign-in')
           %li
-            %a{ :href => about_path}= t('copyrights')
+            %a{ :href => projects_path}= t('projects')
+          %li
+            %a{ :href => about_path}= t('about.about')
+          %li
+            %a{ :href => suggestions_path}= t('suggestions')
+      .col-xs-6
+        %h3= t('follow-the-author')
+        %ul
+          %li
+            =icon('github')
+            %a{:href => 'https://github.com/dukeimg'} GitHub
+          %li
+            =icon('linkedin')
+            %a{:href => 'https://www.linkedin.com/in/dukeimg'} LinkedIn
+          %li
+            =icon('vk')
+            %a{:href => 'https://vk.com/dukeimg'} VK
   .container-fluid.footer-legal
-    %p.text-center.copyrights= t('copyright')
+    %p.text-center.copyrights
+      = t('copyright')
+      =link_to t('viktor-danilov'), dukeimg_path
