@@ -1,8 +1,4 @@
 .container-fullscreen.flexbox.flex-center
-  =render('layouts/header_absolute')
-  %a.btn-back.flexbox.flex-center{:href => new_user_session_path}
-    .glyphicon.glyphicon-menu-left
-    %div= t('back')
   .container
     .row.text-center
       %h1= t('users.sign-up')
@@ -31,4 +27,3 @@
           .col-sm-6
             = f.password_field :password_confirmation, :placeholder => t("users.password"), :class => "form-control", autocomplete: "off"
         = f.submit t("users.sign-up"), :class => "btn btn-default"
-=render('layouts/footer')

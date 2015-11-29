@@ -4,7 +4,7 @@
     %h1.tagline= t('landing.tagline')
     %h3= t('landing.slogan')
     .container{ :style => "margin-top: 25px;"}
-      %a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent{ :href => new_user_session_path}= t('landing.get-started')
+      =link_to t('landing.get-started'), new_user_session_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
 .mdl-grid.intro-grid
   .mdl-cell--7-col.mdl-cell
     .mdl-card.mdl-card-wide
