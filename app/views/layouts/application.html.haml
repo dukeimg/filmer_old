@@ -2,12 +2,43 @@
 %html
   %head
     %title= yield(:title)
+    %link{:rel => "stylesheet", :href => "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.pink-red.min.css"}
+    //%link{:rel => "stylesheet", :href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", :integrity => "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", :crossorigin => "anonymous"}
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = favicon_link_tag
-    %meta{ 'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
-    %meta{ :charset => "utf-8"}
+    %meta{'http-equiv' => "X-UA-Compatible", :content => "IE=edge"}
+    %meta{:charset => "utf-8"}
+    %script{:src => "https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"}
+    %link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
   %body
-    = yield
+    .mdl-layout.mdl-js-layout
+      %header.mdl-layout__header.mdl-layout__header--scroll
+        .mdl-layout__header-row
+          %a.mdl-layout-title.logo-brand{ :href => root_path}= t('Filmer')
+          .mdl-layout-spacer
+          %nav.mdl-navigation
+            -if user_signed_in?
+              =link_to t('suggest'), beta_path, :class => 'mdl-navigation__link'
+              .mdl-navigation__link #{image_tag current_user.avatar.url(:thumb), :class => 'avatar'} #{current_user.name}
+              =link_to t('users.sign-out'), destroy_user_session_path, method: :delete, :class => 'mdl-navigation__link'
+              =link_to t('users.profile'), current_user, :class => 'mdl-navigation__link'
+            -else
+              =link_to t('users.sign-in'), new_user_session_path, :class => 'mdl-navigation__link'
+      .mdl-layout__drawer
+        %span.mdl-layout-title= t('Filmer')
+        %nav.mdl-navigation
+          -if user_signed_in?
+            =link_to t('suggest'), beta_path, :class => 'mdl-navigation__link'
+            .mdl-navigation__link #{image_tag current_user.avatar.url(:thumb), :class => 'avatar'} #{current_user.name}
+            =link_to t('users.sign-out'), destroy_user_session_path, method: :delete, :class => 'mdl-navigation__link'
+            =link_to t('users.profile'), current_user, :class => 'mdl-navigation__link'
+          -else
+            =link_to t('users.sign-in'), new_user_session_path, :class => 'mdl-navigation__link'
+      %main.mdl-layout__content
+        .page-content
+          =yield
+          =render('layouts/footer')

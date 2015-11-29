@@ -1,31 +1,31 @@
-%footer
-  .container.footer-main
-    .row
-      .col-xs-6
-        %h3= t('filmer')
-        %ul
-          -if !user_signed_in?
-            %li
-              %a{ :href => new_user_session_path}= t('users.sign-in')
+%footer.mdl-mega-footer
+  .mdl-mega-footer__top-section
+  .mdl-mega-footer__middle-section
+    .mdl-mega-footer__drop-down-section
+      %h3.mdl-mega-footer__heading= t('filmer')
+      %ul.mdl-mega-footer__link-list
+        -if !user_signed_in?
           %li
-            %a{ :href => projects_path}= t('projects')
-          %li
-            %a{ :href => about_path}= t('about.about')
-          %li
-            %a{ :href => suggestions_path}= t('suggestions')
-      .col-xs-6
-        %h3= t('follow-the-author')
-        %ul
-          %li
-            =icon('github')
-            %a{:href => 'https://github.com/dukeimg'} GitHub
+            %a{ :href => new_user_session_path}= t('users.sign-in')
+        %li
+          %a{ :href => projects_path}= t('projects')
+        %li
+          %a{ :href => about_path}= t('about.about')
+        %li
+          %a{ :href => suggestions_path}= t('suggestions')
+    .mdl-mega-footer__drop-down-section
+      %h3.mdl-mega-footer__heading= t('follow-the-author')
+      %ul.mdl-mega-footer__link-list
+        %li
+          =icon('github')
+          %a{:href => 'https://github.com/dukeimg'} GitHub
           %li
             =icon('linkedin')
             %a{:href => 'https://www.linkedin.com/in/dukeimg'} LinkedIn
           %li
             =icon('vk')
             %a{:href => 'https://vk.com/dukeimg'} VK
-  .container-fluid.footer-legal
-    %p.text-center.copyrights
+  .mdl-mega-footer__bottom-section
+    %p.align-center
       = t('copyright')
       =link_to t('viktor-danilov'), dukeimg_path

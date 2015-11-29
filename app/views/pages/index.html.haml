@@ -1,21 +1,46 @@
 - title "Filmer"
-.jumbotron
-  .welcome-background
-    %video.embed-responsive-item{:autoplay => 'autoplay', :loop => '1', :poster => image_url('landing-background.jpeg')}
-      %source{:src => '/videoplayback'}
-  .container
-    .welcome.text-center
-      %h1.tagline= t('landing.tagline')
-      %h3= t('landing.slogan')
-      .container{ :style => "margin-top: 25px;"}
-        %a.btn.btn-landing{ :href => new_user_session_path}= t('landing.get-started')
-.container
-  .intro-card.center-block.landing-card
-    .text-center
-      =image_tag 'rails-logo.png', :class => 'rails-logo'
-      %p
+.jumbotron.flexbox.flex-center
+  .welcome
+    %h1.tagline= t('landing.tagline')
+    %h3= t('landing.slogan')
+    .container{ :style => "margin-top: 25px;"}
+      %a.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent{ :href => new_user_session_path}= t('landing.get-started')
+.mdl-grid.intro-grid
+  .mdl-cell--7-col.mdl-cell
+    .mdl-card.mdl-card-wide
+      .mdl-card__title.mdl-card--border
+        %h2.mdl-card__title-text= t('about.about')
+      .mdl-card__title
+        %h3.mdl-card__title-text= t('about.what')
+      %p.mdl-card__supporting-text
+        =t('about.what-text')
+        %a{:href => 'https://github.com/dukeimg/filmer'}
+          =icon('github')
+          GitHub
+      .mdl-card__title
+        %h3.mdl-card__title-text= t('about.why')
+      %p.mdl-card__supporting-text= t('about.why-text')
+      .mdl-card__title
+        %h3.mdl-card__title-text= t('about.how')
+      %p.mdl-card__supporting-text= t('about.how-text')
+  .mdl-cell--5-col.mdl-cell
+    .mdl-card.mdl-card-wide
+      .mdl-card__media
+        =image_tag 'rails-logo.png', :class => 'rails-logo'
+      %p.mdl-card__supporting-text
         #{t('landing.intro-text')}
         %a{:href => 'https://github.com/dukeimg/filmer'}
           =icon('github')
           GitHub
-      =link_to t('landing.learn-more'), about_path, :class => 'btn btn-default'
+.mdl-grid.intro-grid
+  .mdl-cell--12-col.mdl-cell
+    .mdl-card.mdl-card-wide
+      .mdl-card__title.mdl-card--border
+        %h2.mdl-card__title-text= t('copyrights')
+      %p.mdl-card__supporting-text
+        %span Icons made by
+        %a{:href => "http://www.freepik.com", :title => "Freepik"} Freepik
+        %span from
+        %a{:href => "http://www.flaticon.com",:title => "Flaticon"} www.flaticon.com
+        %span is licensed by
+        %a{:href => "http://creativecommons.org/licenses/by/3.0/", :title => "Creative Commons BY 3.0"}CC BY 3.0

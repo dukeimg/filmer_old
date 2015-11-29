@@ -11,10 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
 //= require turbolinks
 //= require jquery-ui
 //= require jquery_ujs
 //= require jquery-fileupload/basic
 //= require jquery.Jcrop
 //= require_tree .
+
+document.addEventListener('page:change', function() {
+    componentHandler.upgradeDom();
+});

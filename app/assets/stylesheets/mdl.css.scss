@@ -1,0 +1,15 @@
+//MDL
+
+.mdl-card__media > img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mdl-card-wide {
+  width: 100%;
+}
+
+.mdl-card__title {
+  color: $primary_color;
+}

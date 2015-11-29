@@ -1,23 +1,12 @@
 .jumbotron {
   background-color: transparent;
   height: 550px;
-  margin: 0;
+  margin: 50px 16px;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.welcome-background {
-  position: absolute;
-  top: 0;
-  z-index: -99;
   width: 100%;
-  height: 600px;
-  filter: brightness(70%);
-  -webkit-filter: brightness(70%);
-  overflow: hidden;
-  background-color: transparent;
 }
 
 .welcome {
@@ -25,32 +14,20 @@
   color: #fff;
   text-rendering: optimizelegibility;
   line-height: 1.1;
+  width: 100%;
+  max-width: 900px;
 
   h3 {
     color: white;
   }
 }
 
-.intro-card {
-  padding: 50px;
-  margin: 50px auto;
-  vertical-align: middle;
-  font-size: 1.65rem;
-  line-height: 3rem;
-  width: 800px;
-  background-color: #fff;
+.intro-grid {
+  max-width: 900px;
+}
 
-  &.landing-card {
-    margin-top: 100px;
-  }
-
-  &.black {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .rails-logo {
-    height: 200px;
-  }
+.rails-logo {
+  margin: 16px auto 17px auto;
 }
 
 //about
