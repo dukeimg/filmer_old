@@ -27,7 +27,25 @@
 }
 
 .rails-logo {
-  margin: 16px auto 17px auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+  font-size: 2em;
+
+  >img {
+    height: 250px;
+  }
+
+  >img:first-child {
+    padding-right: 25px;
+  }
+
+  >img:last-child {
+    padding-left: 25px;
+  }
 }
 
 //about
@@ -54,16 +72,14 @@
 }
 
 .dukeimg {
-  height: 100%;
-  color: $dukeimg_card_color;
+  padding: 50px 0;
+}
 
-  #{headings(1,6)} {
-    color: $dukeimg_card_color
-  }
-
-  a {
-    color: $dukeimg_card_color;
-  }
+.dukeimg-avatar {
+  background: url('https://pp.vk.me/c624822/v624822432/5c1fe/CwX9k4uN0YU.jpg');
+  background-size: cover;
+  height: 330px;
+  color: white;
 }
 
 /*ANIMATIONS*/

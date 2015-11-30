@@ -6,23 +6,27 @@
     :src => "https://dl.dropboxusercontent.com/u/100656262/triangle.png",
     :style => "top: #{rand(10...100)}%; left: #{rand(100)}%; animation: fly-triangle #{animation_time}s infinite linear, triangle-opacity #{animation_time}s infinite linear;"}
 .dukeimg.flexbox.flex-center
-  .intro-card.black
-    %h1.text-center= t('viktor-danilov')
-    .container-margin
-      .col-xs-6.text-right
-        %img{:class => "dukeimg-avatar img-circle",
-         :src => "https://pp.vk.me/c624822/v624822432/5c1fe/CwX9k4uN0YU.jpg",
-         :style => 'width: 160px;'}
-      .col-xs-6
+  .mdl-card
+    .mdl-card__title.dukeimg-avatar
+      %h2.mdl-card__title-text= t('viktor-danilov')
+    .mdl-grid
+      .mdl-cell.mdl-cell--2-col
+        %i.material-icons email
+      .mdl-cell.mdl-cell--10-col
         %p
-          =icon('envelope')
-          %a{:href => 'mailto:duke.img@gmail.com'} Email
+          %a{:href => 'mailto:duke.img@gmail.com'} duke.img@gmail.com
+      .mdl-cell.mdl-cell--2-col
+        =icon('github', class: 'fa-fw')
+      .mdl-cell.mdl-cell--10-col
         %p
-          =icon('github')
           %a{:href => 'https://github.com/dukeimg'} GitHub
+      .mdl-cell.mdl-cell--2-col
+        =icon('linkedin', class: 'fa-fw')
+      .mdl-cell.mdl-cell--10-col
         %p
-          =icon('linkedin')
           %a{:href => 'https://www.linkedin.com/in/dukeimg'} LinkedIn
+      .mdl-cell.mdl-cell--2-col
+        =icon('vk', class: 'fa-fw')
+      .mdl-cell.mdl-cell--10-col
         %p
-          =icon('vk')
           %a{:href => 'https://vk.com/dukeimg'} VK

@@ -6,34 +6,40 @@
     .container{ :style => "margin-top: 25px;"}
       =link_to t('landing.get-started'), new_user_session_path, :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent'
 .mdl-grid.intro-grid
-  .mdl-cell--7-col.mdl-cell
+  .mdl-cell--12-col.mdl-cell
     .mdl-card.mdl-card-wide
-      .mdl-card__title.mdl-card--border
-        %h2.mdl-card__title-text= t('about.about')
-      .mdl-card__title
-        %h3.mdl-card__title-text= t('about.what')
-      %p.mdl-card__supporting-text
-        =t('about.what-text')
-        %a{:href => 'https://github.com/dukeimg/filmer'}
-          =icon('github')
-          GitHub
-      .mdl-card__title
-        %h3.mdl-card__title-text= t('about.why')
-      %p.mdl-card__supporting-text= t('about.why-text')
-      .mdl-card__title
-        %h3.mdl-card__title-text= t('about.how')
-      %p.mdl-card__supporting-text= t('about.how-text')
-  .mdl-cell--5-col.mdl-cell
-    .mdl-card.mdl-card-wide
-      .mdl-card__media
-        =image_tag 'rails-logo.png', :class => 'rails-logo'
+      .mdl-card__media.rails-logo
+        =image_tag 'rails-logo.png'
+        +
+        =image_tag 'angularjs.png'
+        +
+        =image_tag 'mdl.png'
       %p.mdl-card__supporting-text
         #{t('landing.intro-text')}
         %a{:href => 'https://github.com/dukeimg/filmer'}
           =icon('github')
           GitHub
 .mdl-grid.intro-grid
-  .mdl-cell--12-col.mdl-cell
+  .mdl-cell--3-col.mdl-cell.flexbox
+    .mdl-card.mdl-card-wide
+      .mdl-card__title.mdl-card--border
+        %h3.mdl-card__title-text= t('about.what')
+      %p.mdl-card__supporting-text
+        =t('about.what-text')
+        %a{:href => 'https://github.com/dukeimg/filmer'}
+          =icon('github')
+          GitHub
+  .mdl-cell--3-col.mdl-cell.flexbox
+    .mdl-card.mdl-card-wide
+      .mdl-card__title.mdl-card--border
+        %h3.mdl-card__title-text= t('about.why')
+      %p.mdl-card__supporting-text= t('about.why-text')
+  .mdl-cell--3-col.mdl-cell.flexbox
+    .mdl-card.mdl-card-wide
+      .mdl-card__title.mdl-card--border
+        %h3.mdl-card__title-text= t('about.how')
+      %p.mdl-card__supporting-text= t('about.how-text')
+  .mdl-cell--3-col.mdl-cell.flexbox
     .mdl-card.mdl-card-wide
       .mdl-card__title.mdl-card--border
         %h2.mdl-card__title-text= t('copyrights')
