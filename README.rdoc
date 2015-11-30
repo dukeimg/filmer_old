@@ -1,28 +1,41 @@
-== README
+== Filemer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Filmer is an open source interactive photo albums hosting, written in Ruby on Rails. 
 
-Things you may want to cover:
+Do you want to see it in action? Here is a working version deployed to heroku http://filmer.herokuapp.com
 
-* Ruby version
+=== What it uses?
+* Ruby on Rails 4.1.1
+* Devise
+* AngularJS
+* Material Design Lite
 
-* System dependencies
+=== How do I get set up?
 
-* Configuration
+To set it up on your local machine here is what you need to do. Install Ruby & Rails. Clone this repo using the following command:
+  
+  git clone https://github.com/dukeimg/filmer
+  cd filmer
 
-* Database creation
+Then resolve dependencies using bundler:
 
-* Database initialization
+  bundle install
 
-* How to run the test suite
+Run Migrations:
 
-* Services (job queues, cache servers, search engines, etc.)
+  rake db:migrate
 
-* Deployment instructions
+Run rails using
 
-* ...
+  rails server
 
+  
+===Pull Requests
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Fork this repo
+* Make changes to code
+* Send Pull Request
+
+===Issues
+
+If you find any issue with the app please do raise an issue here https://github.com/dukeimg/filmer/issues
