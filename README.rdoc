@@ -1,4 +1,4 @@
-== Filemer
+== Filmer
 
 Filmer is an open source interactive photo albums hosting, written in Ruby on Rails. 
 
