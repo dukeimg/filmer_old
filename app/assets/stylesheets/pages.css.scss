@@ -32,8 +32,8 @@
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
-  color: white;
   font-size: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
 
   >img {
     height: 250px;
