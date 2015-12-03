@@ -4,7 +4,7 @@ class PagesController < ApplicationController
 
   def index
     if user_signed_in?
-      redirect_to projects_url
+      redirect_to films_url
     end
   end
 end

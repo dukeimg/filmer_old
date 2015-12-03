@@ -64,3 +64,5 @@ gem 'autoprefixer-rails'
 
 gem 'font-awesome-sass', '~> 4.4.0'
 
+gem 'aws-sdk'
+

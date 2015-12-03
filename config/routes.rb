@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {registrations: "registrations", sessions: 'sessions' }
   root 'pages#index'
-  resources :projects
   resources :films
-  get 'projects' => 'projects#index', as: 'overview'
   get 'about' => 'pages#about'
   get 'dukeimg' => 'pages#dukeimg'
   resources :suggestions

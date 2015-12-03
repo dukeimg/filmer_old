@@ -71,9 +71,11 @@ en:
       upload-message: "Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию.
                        Вы можете загрузить изображение в формате JPG, GIF или PNG.
                        Если у Вас возникают проблемы с загрузкой, попробуйте выбрать фотографию меньшего размера."
+      crop-message: ""
+      choose-file: "Choose file"
 
   warning: "Warning"
-  projects: "Projects"
+  films: "Films"
   follow-the-author: "Follow the author"
   copyright: "Filmer © 2015 "
   viktor-danilov: "Viktor Danilov"
