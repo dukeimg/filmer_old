@@ -15,27 +15,24 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 
   %body
-    .mdl-layout.mdl-js-layout
-      %header.mdl-layout__header.mdl-layout__header--scroll
+    .mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
+      %header.mdl-layout__header
         .mdl-layout__header-row
-          %a.mdl-layout-title.logo-brand{ :href => root_path}= t('Filmer')
           .mdl-layout-spacer
           %nav.mdl-navigation
             -if user_signed_in?
-              =link_to t('suggest'), beta_path, :class => 'mdl-navigation__link'
-              .mdl-navigation__link #{image_tag current_user.avatar.url(:thumb), :class => 'avatar'} #{current_user.name}
               =link_to t('users.sign-out'), destroy_user_session_path, method: :delete, :class => 'mdl-navigation__link'
-              =link_to t('users.profile'), current_user, :class => 'mdl-navigation__link'
             -else
               =link_to t('users.sign-in'), new_user_session_path, :class => 'mdl-navigation__link'
       .mdl-layout__drawer
         %span.mdl-layout-title= t('Filmer')
         %nav.mdl-navigation
           -if user_signed_in?
+            =link_to current_user, :class => 'mdl-navigation__link', :style => 'word-spacing: 10px' do
+              #{image_tag current_user.avatar.url(:thumb), :class => 'avatar'}
+              %b #{current_user.name}
             =link_to t('suggest'), beta_path, :class => 'mdl-navigation__link'
-            .mdl-navigation__link #{image_tag current_user.avatar.url(:thumb), :class => 'avatar'} #{current_user.name}
             =link_to t('users.sign-out'), destroy_user_session_path, method: :delete, :class => 'mdl-navigation__link'
-            =link_to t('users.profile'), current_user, :class => 'mdl-navigation__link'
           -else
             =link_to t('users.sign-in'), new_user_session_path, :class => 'mdl-navigation__link'
       %main.mdl-layout__content
