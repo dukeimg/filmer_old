@@ -1,9 +1,13 @@
 //MDL
 
-.mdl-card__media > img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.mdl-card__media {
+  background-color: transparent;
+
+  > img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 }
 
 .mdl-card-wide {
@@ -12,6 +16,11 @@
 
 .mdl-card-lg {
   width: 512px;
+}
+
+.mdl-card-lg-stretch {
+  min-width: 512px;
+  width: auto;
 }
 
 .mdl-card__title {

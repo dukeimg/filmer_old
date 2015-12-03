@@ -25,6 +25,7 @@ en:
   users:
     edit-profile: "Edit profile"
     edit-password: "Edit password"
+    edit-profile-picture: "Edit profile picture"
     sign-in: "Sign in"
     sign-out: "Sign out"
     profile: "Profile"
@@ -65,6 +66,11 @@ en:
       what-text: "Filmer is an app built using Ruby on Rails for back-end and AngularJS and Material Design Lite for front-end. It's free & completely open source. You can check the source on "
       why-text: "So why am I building? I want to try and learn how to develop a large scale web-application using Rails and improve my skills."
       how-text: "As stated above it's a Ruby on Rails application. Frontend is developed using AngularJS and Material Design Lite. Database is SQLite for development and Postgresql for production using adapter."
+
+  pictures:
+      upload-message: "Друзьям будет проще узнать Вас, если Вы загрузите свою настоящую фотографию.
+                       Вы можете загрузить изображение в формате JPG, GIF или PNG.
+                       Если у Вас возникают проблемы с загрузкой, попробуйте выбрать фотографию меньшего размера."
 
   warning: "Warning"
   projects: "Projects"

@@ -9,7 +9,7 @@ function upload() {
 }
 
 $(document).ready(function() {
-    $(document).on('click', '.btn-close', function(){
+    $(document).on('click', '#btn-close', function(){
         $('.popup').remove();
     });
 });
