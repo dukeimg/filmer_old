@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :suggestions
   has_attached_file :avatar, styles: {preview: '600x600>',  medium: "250x250#", thumb: "50x50#" },
                     default_url: "/images/:style/missing.png",
+                    :animated => false,
                     :processors => [:cropper]
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
@@ -18,7 +19,8 @@ class User < ActiveRecord::Base
 
   def avatar_geometry(style = :original)
     @geometry ||= {}
-    @geometry[style] ||= Paperclip::Geometry.from_file(avatar.path(style))
+    avatar_path = (avatar.options[:storage] == :s3) ? avatar.url(style) : avatar.path(style)
+    @geometry[style] ||= Paperclip::Geometry.from_file(avatar_path)
   end
 
   private

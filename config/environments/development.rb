@@ -38,14 +38,22 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # S3 paperclip
+  #config.paperclip_defaults = {
+  #    :storage => :fog,
+  #    :fog_credentials => {
+  #        :provider => 'AWS',
+  #        :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+  #        :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+  #        :region => 'eu-central-1'
+  #    },
+  #    :fog_directory => ENV['S3_BUCKET_NAME']
+  #}
   config.paperclip_defaults = {
-      :storage => :fog,
-      :fog_credentials => {
-          :provider => 'AWS',
-          :aws_access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-          :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
-          :region => 'eu-central-1'
-      },
-      :fog_directory => ENV['S3_BUCKET_NAME']
+      :storage => :s3,
+      :s3_credentials => {
+          :bucket => ENV['S3_BUCKET_NAME'],
+          :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+      }
   }
 end

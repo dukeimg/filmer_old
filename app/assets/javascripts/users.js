@@ -3,7 +3,7 @@
 function upload() {
     $('#user_avatar').click().fileupload({
         dataType: 'script',
-        type: 'put',
+        type: 'POST',
         autoUpload: 'true'
     });
 }
