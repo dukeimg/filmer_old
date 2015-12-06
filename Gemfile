@@ -64,5 +64,10 @@ gem 'autoprefixer-rails'
 
 gem 'font-awesome-sass', '~> 4.4.0'
 
+gem 'fog', '~> 1.25.0'
+
 gem 'aws-sdk'
 
+gem 'figaro'
+
+gem 'net-ssh'

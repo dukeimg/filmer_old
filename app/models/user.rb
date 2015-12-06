@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
 
   has_many :projects
   has_many :suggestions
-  has_attached_file :avatar, styles: {preview: '600x600>',  medium: "250x250#", thumb: "50x50#" }, default_url: "/images/:style/missing.png", :processors => [:cropper]
+  has_attached_file :avatar, styles: {preview: '600x600>',  medium: "250x250#", thumb: "50x50#" },
+                    default_url: "/images/:style/missing.png",
+                    :processors => [:cropper]
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h
 
